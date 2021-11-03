@@ -9,24 +9,25 @@ class BinarySearchTree
 
   def insert(value)
     new_node = Node.new(value)
-    if @root == nil
+    if @root.nil?
       @root = new_node
       return self
     end
 
     current = @root
 
-    while(true)
+    while true
       return nil if value == current.value
-      if value < current.value 
-        if current.left == nil
-          current.left = new_node 
+
+      if value < current.value
+        if current.left.nil?
+          current.left = new_node
           return self
         end
         current = current.left
       else
-        if current.right == nil
-          current.right = new_node 
+        if current.right.nil?
+          current.right = new_node
           return self
         end
         current = current.right
@@ -35,7 +36,7 @@ class BinarySearchTree
   end
 
   def search(value)
-    return nil if @root == nil
+    return nil if @root.nil?
 
     current = @root
     found = false
@@ -51,7 +52,4 @@ class BinarySearchTree
     end
     found ? current : nil
   end
-end 
-
-
-
+end
