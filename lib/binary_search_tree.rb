@@ -11,7 +11,7 @@ class BinarySearchTree
     new_node = Node.new(value)
     if @root.nil?
       @root = new_node
-      return self
+      return @root
     end
 
     current = @root
@@ -22,13 +22,13 @@ class BinarySearchTree
       if value < current.value
         if current.left.nil?
           current.left = new_node
-          return self
+          return current.left
         end
         current = current.left
       else
         if current.right.nil?
           current.right = new_node
-          return self
+          return current.right
         end
         current = current.right
       end
