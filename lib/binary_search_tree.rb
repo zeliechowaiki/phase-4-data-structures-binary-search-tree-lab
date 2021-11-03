@@ -7,14 +7,12 @@ class BinarySearchTree
     @root = root
   end
 
+  def search(value)
+    # your code here
+  end
+
   def insert(value)
     # your code here
   end
 
-  def search(value)
-    # your code here
-  end
 end 
-
-
-
