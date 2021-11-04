@@ -16,7 +16,7 @@ class BinarySearchTree
 
     current = @root
 
-    while true
+    while current
       return nil if value == current.value
 
       if value < current.value
