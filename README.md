@@ -46,3 +46,29 @@ To pass the tests, you will need to write the following methods:
   allow duplicate nodes to be inserted. If the `Node` was inserted successfully,
   the method should return that `Node`. Otherwise, the method should return
   `nil`.
+
+**Note:** these methods can be coded using either iteration or recursion; you
+are free to use whichever approach you’re comfortable with.
+
+**Hint:**
+
+For both methods, you’ll start at the root and compare the input value to the
+root’s value. Depending on the result of the comparison, you’ll either be done,
+or you’ll continue to either the left or right child, where you’ll repeat the
+process.
+
+Some tips to get it working:
+
+- You will need to use a variable to keep track of which node you’re currently
+  checking.
+- For the `#search` method, you will want to continue looping until you’ve
+  either found the target node or you’ve run out of nodes to check. For the
+  `#insert` method, you will want to continue looping until you’ve either
+  inserted the new node or found that there is already a node in the tree that
+  has the target value.
+- Recall that you can use `while true` to continue looping until a `return`
+  statement is executed.
+
+## Resources
+
+- [Wikipedia: Binary Search Tree](https://en.wikipedia.org/wiki/Binary_search_tree)
